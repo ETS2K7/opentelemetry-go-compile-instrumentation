@@ -615,7 +615,7 @@ func setupLocked(ctx context.Context, cmd *cli.Command) error {
 	if err = sp.store(matched); err != nil {
 		return err
 	}
-	return writeResolutionScope(moduleDirs)
+	return writeResolutionScope(ctx, moduleDirs)
 }
 
 // warnIfNoInstrumentationMatched reports the combined result. An individual
